@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Archive</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1><i class="fas fa-archive"></i> Software Archive</h1>
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="archive.html"><i class="fas fa-box-open"></i> Archive</a>
+    <a href="account.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+    <a href="account.html#register"><i class="fas fa-user-plus"></i> Register</a>
+    <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+  </nav>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <span id="theme-label">Light Mode</span>
+  </div>
+</header>
+
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h2><i class="fas fa-laptop-code"></i> Welcome to the Software Archive</h2>
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search software...">
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section id="featured" class="featured">
+      <h2><i class="fas fa-star"></i> Featured Software</h2>
+      <div class="featured-grid" id="featured-grid"></div>
+    </section>
+
+    <!-- Latest Uploads -->
+    <section id="latest" class="latest">
+      <h2><i class="fas fa-clock"></i> Latest Uploads</h2>
+      <div class="latest-grid" id="latest-grid"></div>
+    </section>
+
+    <!-- Top Rated -->
+    <section id="top-rated" class="top-rated">
+      <h2><i class="fas fa-star"></i> Top Rated Software</h2>
+      <div class="top-rated-grid" id="top-rated-grid"></div>
+    </section>
+
+    <!-- Top Downloads + Trending Side by Side -->
+    <section class="downloads-trending">
+      <div class="top-downloads">
+        <h2><i class="fas fa-download"></i> Top Downloads</h2>
+        <ol id="downloads-list"></ol>
+      </div>
+      <div class="trending">
+        <h2><i class="fas fa-fire"></i> Trending Now</h2>
+        <ul id="trending-list"></ul>
+      </div>
+    </section>
+
+  <!-- Testimonials -->
+<section class="testimonials">
+  <h2><i class="fas fa-comments"></i> What Users Say</h2>
+  <div class="testimonial-grid">
+    <blockquote>
+      <p>"The Archive saved me hours of searching for old tools!"</p>
+      <footer>- User123</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>"Clean interface and reliable downloads."</p>
+      <footer>- DevGuru</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>"I found rare software versions I thought were lost forever."</p>
+      <footer>- RetroCoder</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>"The dark mode toggle makes browsing so much easier at night."</p>
+      <footer>- NightOwl</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>"Submitting my own tools was simple and fast."</p>
+      <footer>- IndieDev</footer>
+    </blockquote>
+  </div>
+</section>
+
+    <!-- Partners -->
+    <section class="partners">
+      <h2><i class="fas fa-handshake"></i> Our Partners</h2>
+      <div class="partner-grid">
+        <div class="partner-card">TechWorld</div>
+        <div class="partner-card">OpenSource Hub</div>
+        <div class="partner-card">DevTools Inc.</div>
+        <div class="partner-card">CodeBase</div>
+        <div class="partner-card">SoftLab</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+      <details><summary>How do I download software?</summary><p>Click the download button on any software card.</p></details>
+      <details><summary>Is the archive free?</summary><p>Yes, all downloads are free to access.</p></details>
+      <details><summary>How do I submit my own software?</summary><p>Register an account and use the submission form.</p></details>
+    </section>
+
+    <!-- Newsletter + Contact Side by Side -->
+    <section class="newsletter-contact">
+      <div class="newsletter">
+        <h2><i class="fas fa-envelope"></i> Stay Updated</h2>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+      </div>
+
+      <div class="contact">
+        <h2><i class="fas fa-envelope-open-text"></i> Contact Us</h2>
+        <form>
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea placeholder="Your Message"></textarea>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><i class="fas fa-archive"></i> © 2026 Software Archive</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

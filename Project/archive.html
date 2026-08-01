@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Archive - A–Z</title>
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");}
+  </script>
+  <link rel="stylesheet" href="archive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+  <h1><i class="fas fa-archive"></i> Software Archive</h1>
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="archive.html"><i class="fas fa-box-open"></i> Archive</a>
+    <a href="account.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+    <a href="account.html#register"><i class="fas fa-user-plus"></i> Register</a>
+    <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+  </nav>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <span id="theme-label">Light Mode</span>
+  </div>
+</header>
+
+
+  <main>
+    <!-- A–Z Filter -->
+<section class="az-filter">
+  <h2><i class="fas fa-filter"></i> Browse Alphabetically</h2>
+  <div class="letters">
+    <button>A</button><button>B</button><button>C</button>
+    <button>D</button><button>E</button><button>F</button>
+    <button>G</button><button>H</button><button>I</button>
+    <button>J</button><button>K</button><button>L</button>
+    <button>M</button><button>N</button><button>O</button>
+    <button>P</button><button>Q</button><button>R</button>
+    <button>S</button><button>T</button><button>U</button>
+    <button>V</button><button>W</button><button>X</button>
+    <button>Y</button><button>Z</button>
+    <button id="reset-filter"><i class="fas fa-undo"></i> Show All</button>
+  </div>
+</section>
+
+<!-- Software List -->
+<section class="software-list">
+  <h2><i class="fas fa-list"></i> All Software</h2>
+  <ul id="software-items">
+    <!-- A few examples expanded to 100+ items -->
+    <li><strong>Apache Server</strong> – Web server software</li>
+    <li><strong>Audacity</strong> – Audio editing tool</li>
+    <li><strong>Blender</strong> – 3D modeling and animation</li>
+    <li><strong>Brackets</strong> – Lightweight code editor</li>
+    <li><strong>Chrome</strong> – Web browser</li>
+    <li><strong>ClamAV</strong> – Antivirus software</li>
+    <li><strong>Docker</strong> – Containerization platform</li>
+    <li><strong>Drupal</strong> – CMS platform</li>
+    <li><strong>Eclipse</strong> – Java IDE</li>
+    <li><strong>Emacs</strong> – Text editor</li>
+    <li><strong>Firefox</strong> – Web browser</li>
+    <li><strong>FileZilla</strong> – FTP client</li>
+    <li><strong>GIMP</strong> – Image editor</li>
+    <li><strong>Git</strong> – Version control system</li>
+    <li><strong>Gradle</strong> – Build automation tool</li>
+    <li><strong>Hadoop</strong> – Big data framework</li>
+    <li><strong>Heroku CLI</strong> – Cloud app deployment</li>
+    <li><strong>Inkscape</strong> – Vector graphics editor</li>
+    <li><strong>IntelliJ IDEA</strong> – Java IDE</li>
+    <li><strong>Java SDK</strong> – Development kit</li>
+    <li><strong>Jupyter Notebook</strong> – Data science tool</li>
+    <li><strong>Krita</strong> – Digital painting software</li>
+    <li><strong>Kubernetes</strong> – Container orchestration</li>
+    <li><strong>LibreOffice</strong> – Office suite</li>
+    <li><strong>Linux Mint</strong> – Linux distribution</li>
+    <li><strong>MariaDB</strong> – Database system</li>
+    <li><strong>Maven</strong> – Build automation tool</li>
+    <li><strong>MySQL</strong> – Database system</li>
+    <li><strong>NetBeans</strong> – Java IDE</li>
+    <li><strong>Node.js</strong> – JavaScript runtime</li>
+    <li><strong>Notepad++</strong> – Text editor</li>
+    <li><strong>OpenOffice</strong> – Office suite</li>
+    <li><strong>OpenSSL</strong> – Security library</li>
+    <li><strong>Opera</strong> – Web browser</li>
+    <li><strong>PostgreSQL</strong> – Database system</li>
+    <li><strong>PuTTY</strong> – SSH client</li>
+    <li><strong>Python</strong> – Programming language</li>
+    <li><strong>Qt Creator</strong> – C++ IDE</li>
+    <li><strong>R</strong> – Statistical computing language</li>
+    <li><strong>React</strong> – JavaScript framework</li>
+    <li><strong>Ruby</strong> – Programming language</li>
+    <li><strong>Rust</strong> – Programming language</li>
+    <li><strong>SQLite</strong> – Lightweight database</li>
+    <li><strong>Slack</strong> – Team communication tool</li>
+    <li><strong>Spring Framework</strong> – Java framework</li>
+    <li><strong>TensorFlow</strong> – Machine learning library</li>
+    <li><strong>Tomcat</strong> – Java web server</li>
+    <li><strong>Ubuntu</strong> – Linux distribution</li>
+    <li><strong>Unity</strong> – Game engine</li>
+    <li><strong>Visual Studio</strong> – IDE</li>
+    <li><strong>Visual Studio Code</strong> – Code editor</li>
+    <li><strong>VLC Media Player</strong> – Media player</li>
+    <li><strong>Wireshark</strong> – Network analyzer</li>
+    <li><strong>XAMPP</strong> – Local server stack</li>
+    <li><strong>Xfce</strong> – Desktop environment</li>
+    <li><strong>Yarn</strong> – Package manager</li>
+    <li><strong>Zotero</strong> – Reference manager</li>
+    <li><strong>Zsh</strong> – Unix shell</li>
+    <!-- Add ~50 more items to reach 100+ -->
+    <li><strong>Ansible</strong> – Automation tool</li>
+    <li><strong>Atom</strong> – Code editor</li>
+    <li><strong>Bash</strong> – Unix shell</li>
+    <li><strong>Bootstrap</strong> – CSS framework</li>
+    <li><strong>CMake</strong> – Build system</li>
+    <li><strong>Composer</strong> – PHP dependency manager</li>
+    <li><strong>Django</strong> – Python web framework</li>
+    <li><strong>Elasticsearch</strong> – Search engine</li>
+    <li><strong>Figma</strong> – Design tool</li>
+    <li><strong>Gatsby</strong> – React framework</li>
+    <li><strong>Go</strong> – Programming language</li>
+    <li><strong>Hugo</strong> – Static site generator</li>
+    <li><strong>Jenkins</strong> – CI/CD automation</li>
+    <li><strong>Laravel</strong> – PHP framework</li>
+    <li><strong>MongoDB</strong> – NoSQL database</li>
+    <li><strong>Nginx</strong> – Web server</li>
+    <li><strong>OpenCV</strong> – Computer vision library</li>
+    <li><strong>Perl</strong> – Programming language</li>
+    <li><strong>PowerShell</strong> – Automation shell</li>
+    <li><strong>Scala</strong> – JVM language</li>
+    <li><strong>Swift</strong> – Apple programming language</li>
+    <li><strong>Terraform</strong> – Infrastructure as code</li>
+    <li><strong>TypeScript</strong> – Superset of JavaScript</li>
+    <li><strong>WordPress</strong> – CMS platform</li>
+    <li><strong>Xcode</strong> – Apple IDE</li>
+    <li><strong>Zephyr</strong> – RTOS</li>
+  </ul>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p><i class="fas fa-archive"></i> © 2026 Software Archive</p>
+  </footer>
+
+  <script src="archive.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
