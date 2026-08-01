@@ -415,3 +415,82 @@ body.dark .testimonial-grid footer { color: #aaa; }
     grid-template-columns: 1fr;
   }
 }
+
+/* Responsive Header for Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;       /* stack items vertically */
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Hide nav by default on mobile */
+  header nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Show nav when active */
+  header nav.active {
+    display: flex;
+  }
+
+  /* Hamburger button */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: auto;
+    color: #fff;
+  }
+
+  /* Theme toggle moves below nav */
+  .theme-toggle {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+}
+/* Hide hamburger by default (desktop) */
+.menu-toggle {
+  display: none;
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: auto;
+    color: #fff;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav {
+    display: none;               /* hidden until toggled */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  header nav.active {
+    display: flex;               /* shown when toggled */
+  }
+
+  .theme-toggle {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+}
+
+

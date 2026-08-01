@@ -152,3 +152,10 @@ document.addEventListener("DOMContentLoaded", () => {
   renderList(document.getElementById("downloads-list"), getRandomItems(downloadsItems, 10));
   renderList(document.getElementById("trending-list"), getRandomItems(trendingItems, 10));
 });
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('header nav');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
