@@ -148,34 +148,39 @@ body.dark .admin-table th {
 /* Responsive Header for Mobile */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;       /* stack items vertically */
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    row-gap: 0.5rem;
   }
 
   header h1 {
     font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
 
-  /* Theme toggle sits above hamburger */
+  /* Theme toggle: top right */
   .theme-toggle {
-    order: -1;                    /* move toggle above menu */
-    margin-bottom: 0.5rem;
-    justify-content: flex-start;
-    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
   }
 
-  /* Hamburger button */
+  /* Hamburger button: directly below the toggle, top right */
   .menu-toggle {
     display: block;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
     cursor: pointer;
     font-size: 1.5rem;
-    margin-left: auto;
     color: #fff;
   }
 
   /* Nav links stacked, hidden until toggled */
   header nav {
+    grid-column: 1 / -1;
     display: none;
     flex-direction: column;
     gap: 10px;
