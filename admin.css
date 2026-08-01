@@ -95,6 +95,12 @@ section h2, section h3 {
   text-align: left;
   color: #333;
 }
+.software-icon {
+  color: #3399ff;
+  width: 1.2em;
+  margin-right: 8px;
+  text-align: center;
+}
 .admin-table th {
   background: #3399ff;
   color: #fff;

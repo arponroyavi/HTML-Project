@@ -112,6 +112,12 @@ input:checked + .slider:before { transform: translateX(26px); }
   transition: background 0.2s ease, transform 0.2s ease;
 }
 .software-list li:hover { background: #e6f0ff; transform: scale(1.02); }
+.software-icon {
+  color: #3399ff;
+  width: 1.3em;
+  margin-right: 10px;
+  text-align: center;
+}
 
 /* Footer */
 footer {

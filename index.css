@@ -107,6 +107,12 @@ header nav a:hover { text-decoration: underline; }
   text-align: center;
 }
 .file-card h3 { color: #3399ff; }
+.file-card-icon {
+  display: block;
+  font-size: 2rem;
+  color: #3399ff;
+  margin-bottom: 0.5rem;
+}
 .file-card button {
   background: #3399ff;
   color: #fff;
@@ -163,6 +169,10 @@ section h2 i { margin-right: 8px; color: #3399ff; }
   border-radius: 4px;
   text-align: center;
   transition: background 0.2s ease, transform 0.2s ease;
+}
+.list-icon {
+  color: #3399ff;
+  margin-right: 8px;
 }
 .top-downloads li:hover, .trending li:hover {
   background: #e6f0ff;
