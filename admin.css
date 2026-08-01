@@ -1,8 +1,3 @@
-html.dark body,
-body.dark {
-  background: #121212;
-  color: #e0e0e0;
-}
 /* Base Light Mode */
 body {
   font-family: Arial, sans-serif;
@@ -11,6 +6,7 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between; /* title left, nav right */
@@ -144,6 +140,11 @@ body.dark .admin-table th {
   color: #fff;
 }
 
+/* Hide hamburger by default (desktop) */
+.menu-toggle {
+  display: none;
+}
+
 /* Responsive Header for Mobile */
 @media (max-width: 768px) {
   header {
@@ -156,17 +157,12 @@ body.dark .admin-table th {
     margin-bottom: 0.5rem;
   }
 
-  /* Hide nav by default on mobile */
-  header nav {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
+  /* Theme toggle sits above hamburger */
+  .theme-toggle {
+    order: -1;                    /* move toggle above menu */
+    margin-bottom: 0.5rem;
+    justify-content: flex-start;
     width: 100%;
-  }
-
-  /* Show nav when active */
-  header nav.active {
-    display: flex;
   }
 
   /* Hamburger button */
@@ -178,46 +174,14 @@ body.dark .admin-table th {
     color: #fff;
   }
 
-  /* Theme toggle moves below nav */
-  .theme-toggle {
-    margin-top: 1rem;
-    justify-content: flex-start;
-  }
-}
-/* Hide hamburger by default (desktop) */
-.menu-toggle {
-  display: none;
-}
-
-/* Show hamburger only on mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-left: auto;
-    color: #fff;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+  /* Nav links stacked, hidden until toggled */
   header nav {
-    display: none;               /* hidden until toggled */
+    display: none;
     flex-direction: column;
     gap: 10px;
     width: 100%;
   }
-
   header nav.active {
-    display: flex;               /* shown when toggled */
-  }
-
-  .theme-toggle {
-    margin-top: 1rem;
-    justify-content: flex-start;
+    display: flex;
   }
 }
-
