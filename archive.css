@@ -65,7 +65,7 @@ input:checked + .slider:before { transform: translateX(26px); }
 /* Archive Search */
 .archive-search-section {
   text-align: center;
-  padding: 2rem 2rem 0;
+  padding: 2rem;
 }
 .search-container {
   display: inline-flex;
