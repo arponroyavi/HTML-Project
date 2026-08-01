@@ -439,4 +439,56 @@ body.dark .testimonial-grid footer { color: #aaa; }
     width: 100%;
   }
   header nav.active { display: flex; }
+
+  /* Hero */
+  .hero {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 1rem;
+  }
+  .search-container input {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Card grids: 2–3 columns instead of a fixed 5, scaling with width */
+  .featured-grid, .latest-grid, .top-rated-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .file-card { padding: 0.75rem; }
+  .file-card h3 { font-size: 1rem; }
+  .file-card-icon { font-size: 1.5rem; }
+
+  /* Top Downloads + Trending: stack instead of side by side */
+  .downloads-trending {
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  /* Stay Updated + Contact Us: stack instead of side by side */
+  .newsletter-contact {
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .newsletter form {
+    flex-direction: column;
+  }
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+  .contact form {
+    max-width: 100%;
+  }
+
+  /* Testimonials / Partners / FAQ: tighten side margins */
+  .testimonials, .partners, .faq {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
 }
