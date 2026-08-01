@@ -62,6 +62,29 @@ header nav a:hover { text-decoration: underline; }
 input:checked + .slider { background-color: #3399ff; }
 input:checked + .slider:before { transform: translateX(26px); }
 
+/* Archive Search */
+.archive-search-section {
+  text-align: center;
+  padding: 2rem 2rem 0;
+}
+.search-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.search-container i {
+  font-size: 1.2rem;
+  color: #3399ff;
+  cursor: pointer;
+}
+.search-container input {
+  padding: 10px;
+  width: 280px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 /* A–Z Filter */
 .az-filter {
   text-align: center;
@@ -133,6 +156,11 @@ body.dark header { background: #222; }
 body.dark footer { background: #222; color: #e0e0e0; }
 body.dark .az-filter { background: #1f1f1f; color: #e0e0e0; }
 body.dark .az-filter h2 { color: #e0e0e0; }
+body.dark .search-container input {
+  background: #222;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
 
 /* A–Z buttons white text in dark mode */
 body.dark .letters button { background: #444; color: #fff; }

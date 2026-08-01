@@ -196,4 +196,30 @@ body.dark .admin-table th {
   header nav.active {
     display: flex;
   }
+
+  /* Admin Dashboard: single column, tighter spacing */
+  .admin-page { padding: 1rem; }
+  .admin-dashboard {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .admin-card {
+    padding: 0.75rem;
+    overflow-x: auto;
+  }
+  .admin-card h3 { font-size: 1.1rem; }
+
+  /* Tables: shrink and allow horizontal scroll instead of overflowing the page */
+  .admin-table {
+    font-size: 0.85rem;
+    min-width: 420px;
+  }
+  .admin-table th, .admin-table td {
+    padding: 6px;
+  }
+  .admin-card button {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    margin: 2px 4px 2px 0;
+  }
 }

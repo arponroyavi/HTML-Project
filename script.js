@@ -28,6 +28,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Hero search: jump to the full archive, pre-filtered by query
+  const heroSearchInput = document.getElementById("hero-search-input");
+  const heroSearchBtn = document.getElementById("hero-search-btn");
+
+  function runHeroSearch() {
+    const query = heroSearchInput.value.trim();
+    if (query) {
+      window.location.href = `archive.html?q=${encodeURIComponent(query)}`;
+    } else {
+      window.location.href = "archive.html";
+    }
+  }
+
+  if (heroSearchInput && heroSearchBtn) {
+    heroSearchBtn.addEventListener("click", runHeroSearch);
+    heroSearchInput.addEventListener("keydown", e => {
+      if (e.key === "Enter") runHeroSearch();
+    });
+  }
+
   // Helper functions
   function getRandomItems(arr, count) {
     const shuffled = [...arr].sort(() => 0.5 - Math.random());
