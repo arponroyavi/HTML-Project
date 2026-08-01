@@ -37,6 +37,7 @@ header nav a:hover { text-decoration: underline; }
 /* Theme Toggle Switch */
 .theme-toggle {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 8px;
 }
