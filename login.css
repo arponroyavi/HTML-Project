@@ -1,0 +1,246 @@
+/* Design tokens: colors, fonts, spacing, shared across all pages */
+:root{
+  --bg:            #F5F6F2;
+  --surface:       #FFFFFF;
+  --surface-2:     #ECEEE8;
+  --border:        #DADDD4;
+  --border-strong: #C2C6BB;
+  --ink:           #16191C;
+  --ink-soft:      #4B5054;
+  --ink-faint:     #7C817A;
+
+  --accent:        #D97E1E;   /* amber */
+  --accent-ink:    #1B1F22;
+  --accent-soft:   rgba(217,126,30,0.12);
+  --accent-2:      #1F6F5C;   /* teal */
+  --accent-2-soft: rgba(31,111,92,0.12);
+  --danger:        #B8452E;
+  --danger-soft:   rgba(184,69,46,0.12);
+
+  --bar:           #14171A;   /* header bar, stays dark in both themes */
+  --bar-text:      #ECEEE9;
+  --bar-text-dim:  #9DA39A;
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body:    "Inter", "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", "Courier New", monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(20,23,26,0.08);
+  --shadow-md: 0 10px 28px -12px rgba(20,23,26,0.28);
+  --ease: cubic-bezier(.2,.7,.3,1);
+}
+
+body.dark{
+  --bg:            #101214;
+  --surface:       #191C1F;
+  --surface-2:     #202327;
+  --border:        #2B2F33;
+  --border-strong: #3A3F44;
+  --ink:           #EDEFEA;
+  --ink-soft:      #B4B9B2;
+  --ink-faint:     #767C75;
+
+  --accent:        #E89A45;
+  --accent-soft:   rgba(232,154,69,0.16);
+  --accent-2:      #38A88C;
+  --accent-2-soft: rgba(56,168,140,0.16);
+  --danger:        #D8674B;
+  --danger-soft:   rgba(216,103,75,0.16);
+}
+/* Shared header, theme toggle, and footer styles used on every page */
+body{
+  font-family: var(--font-body);
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  transition: background-color .3s var(--ease), color .3s var(--ease);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+/* Header stays dark regardless of the light/dark toggle */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--bar);
+  color: var(--bar-text);
+  padding: 0.95rem 1.75rem;
+  border-bottom: 3px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+header h1{
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--bar-text);
+}
+header h1 i{ color: var(--accent); }
+
+header nav{
+  display: flex;
+  gap: 1.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+header nav a{
+  color: var(--bar-text-dim);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+header nav a:hover{ color: var(--bar-text); border-color: var(--accent); }
+
+/* Theme Toggle */
+.theme-toggle{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+#theme-label{
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--bar-text-dim);
+}
+.switch{ position: relative; display: inline-block; width: 42px; height: 22px; }
+.switch input{ opacity: 0; width: 0; height: 0; }
+.slider{
+  position: absolute; cursor: pointer; inset: 0;
+  background: #3A3F44; transition: .3s var(--ease); border-radius: 22px;
+}
+.slider:before{
+  position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px;
+  background: #fff; transition: .3s var(--ease); border-radius: 50%;
+}
+.switch input:checked + .slider{ background: var(--accent); }
+.switch input:checked + .slider:before{ transform: translateX(20px); }
+
+/* Hamburger */
+.menu-toggle{ display: none; }
+
+/* Buttons */
+button, .btn{
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* Footer */
+footer{
+  background: var(--bar);
+  color: var(--bar-text-dim);
+  text-align: center;
+  padding: 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: .02em;
+}
+footer i{ color: var(--accent); }
+
+/* Mobile header layout */
+@media (max-width: 768px){
+  header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    row-gap: 0.6rem;
+  }
+  header h1{ font-size: 1.2rem; grid-column: 1; grid-row: 1 / span 2; }
+  .theme-toggle{ grid-column: 2; grid-row: 1; justify-self: end; }
+  .menu-toggle{
+    display: block;
+    grid-column: 2; grid-row: 2; justify-self: end;
+    cursor: pointer; font-size: 1.4rem; color: var(--bar-text);
+  }
+  header nav{
+    grid-column: 1 / -1;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding-top: 4px;
+  }
+  header nav.active{ display: flex; }
+}
+.account-page{
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 3rem 1.5rem;
+  flex-wrap: wrap;
+}
+.account-section{
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  width: 320px;
+  overflow: hidden;
+}
+.account-section::before{
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--accent);
+}
+.account-section h2{
+  text-align: center;
+  margin: 0 0 1.4rem;
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.account-section h2 i{ color: var(--accent); margin-right: 8px; }
+.account-section label{
+  display: block;
+  margin-top: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+  letter-spacing: .02em;
+}
+.account-section input{
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+  transition: border-color .2s var(--ease);
+}
+.account-section input:focus{ outline: none; border-color: var(--accent); }
+.account-section button{
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+  background: var(--ink);
+  color: var(--surface);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s var(--ease);
+}
+.account-section button:hover{ background: var(--accent); color: var(--accent-ink); }
